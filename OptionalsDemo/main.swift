@@ -5,9 +5,8 @@
 //  Created by Tulio Marcos Franca on 17/02/21.
 //
 
-let myOptional: String?
-
-myOptional = nil
+//let myOptional: String?
+//myOptional = nil
 //myOptional = "Tulio"
 
 // 1 - force unwrapping
@@ -29,5 +28,24 @@ myOptional = nil
 //}
 
 // 4 - nil coalescing operator
-let text: String = myOptional ?? "DEFAULT VALUE HERE!"
-print(text)
+//let text: String = myOptional ?? "DEFAULT VALUE HERE!"
+//print(text)
+
+// 5 - optional chaining
+struct MyOptional {
+    var property = 123
+    func method() {
+        print("struct's method!")
+    }
+}
+
+let myOptional: MyOptional?
+myOptional = MyOptional()
+//myOptional = nil
+
+// optional chaining
+print(myOptional!.property)
+//print(myOptional?.property)
+
+//myOptional!.method()
+myOptional?.method()
