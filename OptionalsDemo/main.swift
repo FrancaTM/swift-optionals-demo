@@ -7,8 +7,8 @@
 
 let myOptional: String?
 
-//myOptional = nil
-myOptional = "Tulio"
+myOptional = nil
+//myOptional = "Tulio"
 
 // 1 - force unwrapping
 //let text: String = myOptional!
@@ -22,8 +22,12 @@ myOptional = "Tulio"
 //}
 
 // 3 - optional binding
-if let safeOptional = myOptional {
-    print(safeOptional)
-} else {
-    print("myOptional is not safe! It contains NIL!")
-}
+//if let safeOptional = myOptional {
+//    print(safeOptional)
+//} else {
+//    print("myOptional is not safe! It contains NIL!")
+//}
+
+// 4 - nil coalescing operator
+let text: String = myOptional ?? "DEFAULT VALUE HERE!"
+print(text)
