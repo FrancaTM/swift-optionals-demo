@@ -5,7 +5,11 @@
 //  Created by Tulio Marcos Franca on 17/02/21.
 //
 
-import Foundation
+let myOptional: String?
 
-print("Hello, World!")
+myOptional = "Tulio" //nil
 
+// 1 - force unwrapping
+let text: String = myOptional!
+
+print(text)
