@@ -7,15 +7,23 @@
 
 let myOptional: String?
 
-myOptional = "Tulio" //nil
+//myOptional = nil
+myOptional = "Tulio"
 
 // 1 - force unwrapping
 //let text: String = myOptional!
 //print(text)
 
 // 2 - check for nil value
-if myOptional != nil {
-    print(myOptional!)
+//if myOptional != nil {
+//    print(myOptional!)
+//} else {
+//    print("myOptional contains NIL!")
+//}
+
+// 3 - optional binding
+if let safeOptional = myOptional {
+    print(safeOptional)
 } else {
-    print("myOptional contains NIL!")
+    print("myOptional is not safe! It contains NIL!")
 }
